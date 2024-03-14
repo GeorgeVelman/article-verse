@@ -1,10 +1,9 @@
+import ThemeProvider from 'app/providers/ThemeProvider/ui/ThemeProvider'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import App from './App'
-import { testFunc } from './test'
-import ThemeProvider from './theme/ThemeProvider'
+import App from './app/App'
+import './shared/config/i18n/i18n'
 
-testFunc()
 render(
 	<BrowserRouter>
 		<ThemeProvider>
