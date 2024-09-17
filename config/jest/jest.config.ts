@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-import path from 'path';
+import path from 'path'
 
 export default {
     clearMocks: true,
@@ -190,4 +190,4 @@ export default {
 
     // Whether to use watchman for file crawling
     // watchman: true,
-};
+}
