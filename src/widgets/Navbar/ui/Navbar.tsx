@@ -6,7 +6,7 @@ import Modal from 'shared/ui/Modal/Modal'
 import cls from './Navbar.module.scss'
 
 interface NavbarProps {
-    className?: string;
+    className?: string
 }
 
 export const Navbar = ({ className }: NavbarProps) => {
@@ -29,8 +29,7 @@ export const Navbar = ({ className }: NavbarProps) => {
             </Button>
             <Modal isOpen={isAuthModal} onClose={onToggleModal}>
                 {/*eslint-disable-line*/}
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna.
             </Modal>
         </div>
