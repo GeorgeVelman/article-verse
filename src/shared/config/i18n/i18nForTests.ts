@@ -1,15 +1,18 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-i18n.use(initReactI18next).init({
-    lng: 'ru',
-    fallbackLng: 'ru',
-    debug: false,
+const i18nForTests = i18n.createInstance()
 
+i18nForTests.use(initReactI18next).init({
+    lng: 'cimode',
+    fallbackLng: 'cimode',
+    debug: false,
     interpolation: {
-        escapeValue: false, // not needed for react!!
+        escapeValue: false,
     },
-    resources: { ru: { translations: {} } },
+    resources: {
+        cimode: { translations: {} },
+    },
 })
 
-export default i18n
+export default i18nForTests

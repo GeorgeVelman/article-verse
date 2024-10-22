@@ -30,7 +30,6 @@ const Input = memo((props: InputProps) => {
 
     const onBlur = () => {
         setIsFocused(false)
-        ref.current?.focus()
     }
 
     const onFocus = () => {
@@ -44,6 +43,7 @@ const Input = memo((props: InputProps) => {
     useEffect(() => {
         if (autoFocus) {
             setIsFocused(true)
+            ref.current?.focus()
         }
     }, [autoFocus])
 
