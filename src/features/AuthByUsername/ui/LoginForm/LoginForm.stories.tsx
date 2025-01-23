@@ -35,7 +35,5 @@ withError.decorators = [StoreDecorator({
 export const Loading = Template.bind({})
 Loading.args = {}
 Loading.decorators = [StoreDecorator({
-    loginForm: {
-        isLoading: true,
-    },
+    loginForm: { isLoading: true },
 })]

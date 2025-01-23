@@ -1,7 +1,7 @@
 import { userActions } from 'entities/User'
 import { getUserAuthData } from 'entities/User/model/selectors/getUserAuthData/getUserAuthData'
 import { LoginModal } from 'features/AuthByUsername'
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -19,17 +19,17 @@ export const Navbar = ({ className }: NavbarProps) => {
     const authData = useSelector(getUserAuthData)
     const dispatch = useDispatch()
 
-    const onCloseModal = useCallback(() => {
+    const onCloseModal = () => {
         setIsAuthModal(false)
-    }, [])
+    }
 
-    const onShowModal = useCallback(() => {
+    const onShowModal = () => {
         setIsAuthModal(true)
-    }, [])
+    }
 
-    const onLogout = useCallback(() => {
+    const onLogout = () => {
         dispatch(userActions.logout())
-    }, [dispatch])
+    }
 
     if (authData) {
         return (
@@ -54,7 +54,7 @@ export const Navbar = ({ className }: NavbarProps) => {
             >
                 {t('Войти')}
             </Button>
-            <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+            {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
         </div>
     )
 }
